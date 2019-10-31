@@ -170,6 +170,7 @@ After you have the changes from all members in the `dev` branch it is time we me
 
 
 1. `git checkout master`
+2. `git pull origin dev`
 2. `git merge dev`
 
 The --no-ff flag causes the merge to always create a new commit object, even if the merge could be performed with a fast-forward. This avoids losing information about the historical existence of a feature branch and groups together all commits that together added the feature.
