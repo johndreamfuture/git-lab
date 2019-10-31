@@ -16,9 +16,9 @@ Once settled in your groups decide who will be the Git Czar
 
 4. Your team members should have received an invitation to collaborate via email.
 
-5. **Clone** the repo to your local machine. **Do not fork.** `cd` into the `git-group-practice` directory.
+5. **Clone** the repo to your local machine. It's your own repo so **Do not fork.** `cd` into the `git-group-practice` directory.
  
- * You as the Git Czar, switch to a new branch `dev`
+ * Switch to a new branch `dev`.
 
 ```
 ➜  git-group-practice:(master) git checkout -b dev
@@ -49,13 +49,6 @@ If you go to Github, you should see the following:
 
 ![](screenshot-dev.png)
 
-You can continue and merge `dev` branch into `master` or you can skip ahead next two bullet points.
-
- * Next, click on `Compare & pull request` on the `dev` branch you just pushed.
-
- * After creating your pull request, you should see:
-
-![](screenshot-dev2.png)
 
 Now that you have a remote `dev` branch let's go ahead and set it as the **default** branch of our repository.
 
@@ -69,30 +62,37 @@ Your default branch is named `master`. However, we suggest using a `dev` branch 
 
 6. In Settings, in the left menu, click Branches.
 
-Upadte the `dev` to be the default branch.
+Update the `dev` to be the default branch.
 
 ![](dev-default.png)
 
 
-### All members do:
+### The rest of the members:
 
 1. **Clone** the repo to your local machine. **Do not fork.** `cd` into the `git-group-practice` directory.
 
-1. Type `git branch -a` to see which branch you are on, as well as, your remotes.
+1. Type `git branch -a` to see which branch you are on, as well as, your remotes. The branch you are on is supposed to have a `*` in front.
 
-1. Create a branch as yourname-master `git checkout -b yourname-branch`. 
-    > (i.e., git checkout -b svetla-branch)
+```
+* dev
+  master
+```
+
+1. Create a branch as yourname-dev `git checkout -b yourname-dev`. 
+    > (i.e., git checkout -b svetla-dev)
 
 1. Open the `README` in the text editor.
 
-1. Navigate to [Facts Site](https://www.thefactsite.com/) and select a fun and interesting fact of category of your choice. Copy and paste the text into the `README` file. 
+1. Navigate to [Facts Site](https://www.thefactsite.com/) and select a fun and interesting fact of your choice. Copy and paste the text into the `README` file. You can do this task at the same time.
 
-1. Check to see that changes were made using `git status`. 
+
+1. Check to see which changes were made using `git status`. 
+
 
 **It should look something like this:**
 
 ```
-On branch svetla-branch
+On branch svetla-dev
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git checkout -- <file>..." to discard changes in working directory)
@@ -102,50 +102,74 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
-7. `git add README.md` for staging and then `git commit -m "add readme"`. **Do Not Push yet.**
+7. `git add README.md` for staging and then `git commit -m "add readme"`.
 
-8. `git status` at this point will say nothing to commit.
+8. All members should push their changes.
 
-
-9. Now, let's push to the correct branch `git push origin yourname-branch`
-
-### Git Czar does:
-1. On Github, click on the branches button to see the branches from your team.
-
-1. You should see all the branches from the other team members, make sure you have all the branches before moving on. 
+  `git push origin svetla-dev`
 
 ### All members do:
-- On Github, under the Your Branches section, make a pull request using the new pull request button, base should be set to head and compare will be the yourname branch. 
+- On Github, under the Your Branches section, make a pull request using the new pull request button, base should be set to head and compare will be the yourname -dev. 
 
 *OR*
 
-- In the pull request tab, select New Pull Request, and then select base to be master and compare will be the yourname branch. Once confirmed click on Create Pull Request, add a message and click on Merge pull request. Confirm the merge.
+- In the pull request tab, select New Pull Request, and then select base to be master and compare will be the yourname-dev branch. Once confirmed click on Create Pull Request.
+
 
 ### Git Czar does:
-1. Go to the pull request tab, select the pull request to work on, confirm the PR. There should be a merge conflict. Click the resolve conflict button.
+1. On Github, click on the Pull Requests tab. You should see pull requests from all team members.
 
-1. You will see the conflicts page.
+2. Choose one, got to Files Changed, review the changes, then go to Conversation  and merge it in.
 
-1. There are command line instructions and an interface, *we will show you*, we don't recommend doing it this way and stick to using the github UI.
+3. Select the next pull request and notice there is most likely a merge conflict. 
 
-**You should see something like this:**
+4. Request the team member to resolve the merge conflict.
+
+5. Once the merge conflict is resolved, merge it in.
+
+### Team member with a merge conflict
+
+1. Make sure you are on yourname-dev
+
+`git checkout yourname-dev`
+
+2. Get the **latest changes** from `dev` by running `git pull origin dev` (very important step).
+
+3. The text editor will highlight the merge conflict like so:
 
 ```
-# git-group-morning
-<<<<<<< david-branch
-const name = 'David Whitlatch'
+# git-group-practice
+<<<<<<< HEAD
+*YOUR VERSION*
 =======
-const name = 'Maddy Rombes';
->>>>>>> master
+*What's currently on dev branch*
+>>>>>>> commit hash
 ```
+4. The objective is to have both your changes, so in this situation simply remove `<<<<<<< HEAD`, `=======` and `>>>>>>> commit hash`
 
->To see the beginning of the merge conflict in your file, search the file for the conflict marker <<<<<<<. When you open the file in your text editor, you'll see the changes from the HEAD or base branch after the line <<<<<<< HEAD. Next, you'll see =======, which divides your changes from the changes in the other branch, followed by >>>>>>> BRANCH-NAME. source
+5. The editor may have the following option as well:
 
-- At this point, you should see one team members name in the `README` file, the name remaining should be whose pull request was pushed up last.
+![](vs-code.png)
+   You may choose to `Accept Both Changes`.
 
-4. Merge all your pull requests into master.
+6. Add, commit and push your changes. 
 
-1. Make your changes, click mark as resolved, and commit the merge and confirm the merge.
+7. Go back to GitHub, on Pull Request tab, select your Pull Request again and this time you should see: 
+
+![](success.png)
+
+8. Inform the Git Tzar that your code is ready to be merged.
+
+
+
+You can continue and merge `dev` branch into `master` or you can skip ahead next two bullet points.
+
+ * Next, click on `Compare & pull request` on the `dev` branch you just pushed.
+
+ * After creating your pull request, you should see:
+
+![](screenshot-dev2.png)
+
 
 ### Everyone does:
 1. `git checkout master` —— switch to the master branch
