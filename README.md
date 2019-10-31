@@ -195,15 +195,15 @@ To https://github.com/svetlasyrimis/test-group-git.git
 
 
 ### Important commands:
-1. `git checkout dev` —— switch to the dev branch
-1. `git pull origin dev` ——— get the changes from the `dev` 
-1. `git checkout yourname-dev` ———— to switch your branch
-1. `git merge dev` ———- to merge dev changes into your branch 
+ `git checkout dev` —— switch to the dev branch
+ `git pull origin dev` ——— get the changes from the `dev` 
+ `git checkout yourname-dev` ———— to switch your branch
+ `git merge dev` ———- to merge dev changes into your branch 
 
 
 
-1. Delete your remaining local branches `git branch -d yourname-branch` [-d or -D ?](https://koukia.ca/delete-a-local-and-a-remote-git-branch-61df0b10d323)
-2. Delete the remote branches `git push origin --delete remote-branch`
+ Delete your remaining local branches `git branch -d yourname-branch` [-d or -D ?](https://koukia.ca/delete-a-local-and-a-remote-git-branch-61df0b10d323)
+ Delete the remote branches `git push origin --delete remote-branch`
 
 
 `git log --oneline --decorate --graph --all` to see the history of what we just did. 
