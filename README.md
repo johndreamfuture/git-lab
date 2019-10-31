@@ -145,9 +145,10 @@ no changes added to commit (use "git add" and/or "git commit -a")
 *What's currently on dev branch*
 >>>>>>> commit hash
 ```
+
 4. The objective is to have both your changes, so in this situation simply remove `<<<<<<< HEAD`, `=======` and `>>>>>>> commit hash`
 
-5. The editor may have the following option as well:
+5. The text editor may have the following options as well:
 
 ![](vs-code.png)
    You may choose to `Accept Both Changes`.
@@ -162,27 +163,48 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 
 
-You can continue and merge `dev` branch into `master` or you can skip ahead next two bullet points.
 
- * Next, click on `Compare & pull request` on the `dev` branch you just pushed.
+### Git Tzar(wait for assistance)
 
- * After creating your pull request, you should see:
-
-![](screenshot-dev2.png)
+After you have the changes from all members in the `dev` branch it is time we merge `dev` into `master`. 
 
 
-### Everyone does:
-1. `git checkout master` —— switch to the master branch
-1. `git pull origin master` ——— get the changes from the master 
-1. `git checkout yourname-branch` ———— to switch your branch
-1. `git merge master` ———- to merge master changes into your branch
+1. `git checkout master`
+2. `git merge dev`
 
-- Now everyone should see the updated file in their text editor. 
+The --no-ff flag causes the merge to always create a new commit object, even if the merge could be performed with a fast-forward. This avoids losing information about the historical existence of a feature branch and groups together all commits that together added the feature.
 
-- Confirm your changes are the same as on github enterprise.
+[](https://nvie.com/posts/a-successful-git-branching-model/)
 
-1. Switch to master branch, `git checkout master`
-1. Delete your remaining branches `git branch -d yourname-branch` [-d or -D ?](https://koukia.ca/delete-a-local-and-a-remote-git-branch-61df0b10d323)
+3. `git push origin master`
+
+```
+➜  test-group-git git:(dev) git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+➜  test-group-git git:(master) git merge dev
+Updating 29fb49d..804ab70
+Fast-forward
+ README.md | 5 +----
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+➜  test-group-git git:(master) git push origin master
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/svetlasyrimis/test-group-git.git
+   085148e..804ab70  master -> master
+```
+
+
+### Important commands:
+1. `git checkout dev` —— switch to the dev branch
+1. `git pull origin dev` ——— get the changes from the `dev` 
+1. `git checkout yourname-dev` ———— to switch your branch
+1. `git merge dev` ———- to merge dev changes into your branch 
+
+
+
+1. Delete your remaining local branches `git branch -d yourname-branch` [-d or -D ?](https://koukia.ca/delete-a-local-and-a-remote-git-branch-61df0b10d323)
+2. Delete the remote branches `git push origin --delete remote-branch`
+
 
 `git log --oneline --decorate --graph --all` to see the history of what we just did. 
 
