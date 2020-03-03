@@ -197,7 +197,7 @@ To https://github.com/svetlasyrimis/test-group-git.git
 
 
 
-You can read more at Github Helps - [Administering a Repository](https://help.github.com/en/github/administering-a-repository)
+You can read more at Github Help - [Administering a Repository](https://help.github.com/en/github/administering-a-repository)
 
 
  
