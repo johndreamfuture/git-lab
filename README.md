@@ -44,15 +44,11 @@ Update the `dev` to be the default branch.![](dev-default.png)
 
 <!-- ![](screenshot-dev.png) -->
 
-
-
-
-
 ### The rest of the members:
 
 1. **Clone** the repo to your local machine. **Do not fork.** `cd` into the `git-group-practice` directory.
 
-1. Type `git branch -a` to see which branch you are on, as well as, your remotes. The branch you are on is supposed to have a `*` in front.
+2. Type `git branch -a` to see which branch you are on, as well as, your remotes. The branch you are on is supposed to have a `*` in front.
 
 ```
 * dev
@@ -64,12 +60,12 @@ Update the `dev` to be the default branch.![](dev-default.png)
 git checkout -b <your name here-dev>
 ``` 
 
-1. Open the `README` in the text editor.
+4. Open the `README` in the text editor.
 
-1. Navigate to [Facts Site](https://www.thefactsite.com/) and select a fun and interesting fact of your choice. Copy and paste the text into the `README` file. You can do this task at the same time.
+5. Navigate to [Facts Site](https://www.thefactsite.com/) and select a fun and interesting fact of your choice. Copy and paste the text into the `README` file. You can do this task at the same time.
 
 
-1. Check to see which changes were made using `git status`. 
+6. Check to see which changes were made using `git status`. 
 
 
 **It should look something like this:**
@@ -161,13 +157,13 @@ After you have the changes from all members in the `dev` branch it is time we me
 
 1. `git checkout master`
 2. `git pull origin dev`
-2. `git merge dev`
+3. `git merge dev`
 
 The --no-ff flag causes the merge to always create a new commit object, even if the merge could be performed with a fast-forward. This avoids losing information about the historical existence of a feature branch and groups together all commits that together added the feature.
 
 [](https://nvie.com/posts/a-successful-git-branching-model/)
 
-3. `git push origin master`
+4. `git push origin master`
 
 ```
 ➜  test-group-git git:(dev) git checkout master
@@ -201,26 +197,7 @@ To https://github.com/svetlasyrimis/test-group-git.git
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-You can read more at Github Help - [Administering a Repository](https://help.github.com/en/github/administering-a-repository)
+You can read more at Github Helps - [Administering a Repository](https://help.github.com/en/github/administering-a-repository)
 
 
  
