@@ -1,4 +1,6 @@
-### Git Group exercise
+# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)  SOFTWARE ENGINEERING IMMERSIVE
+
+
 
 # Group Git
 
@@ -9,62 +11,41 @@ Once settled in your groups decide who will be the Git Czar
 ### Git Czar does:
 
 1. On GitHub(personal GitHub **NOT** Enterprise) make a project repo called `git-group-practice`. Make it public and initialize a README).
+     
+2. Add a develop branch on your remote repository 
+# ![](add_branch.png)
 
-2. Share the git repo link with your team in slack.
+3. Now that you have a remote `dev` branch let's go ahead and set it as the **default** branch of our repository. 
 
-3. In Settings, under Collaborators, add your team members.
+4. Your default branch is named `master`. If you have admin rights over a repository on GitHub, you can change the default branch on the repository. [Setting the default branch](https://help.github.com/en/github/administering-a-repository/setting-the-default-branch)
 
-4. Your team members should have received an invitation to collaborate via email.
+5. In Settings, in the left menu, click Branches.
 
-5. **Clone** the repo to your local machine. It's your own repo so **Do not fork.** `cd` into the `git-group-practice` directory.
+Update the `dev` to be the default branch.![](dev-default.png)
+
+4. Create branch protection rules  
+- Click on settings and then branches
+- Add rule to dev branch    
+- Check Require pull request reviews before merging
+- Check Require view from Code Owners   
+- Save Changes   
+
+# ![](add_rules.png)
+
+5. Share the git repo link with your team in slack.
+
+6. In Settings, under Collaborators, add your team members.
  
- * Switch to a new branch `dev`.
+7. Your team members should have received an invitation to collaborate via email.
 
-```
-➜  git-group-practice:(master) git checkout -b dev
-Switched to a new branch 'dev'
-```
-
- * Make a change to the README.md file, add, commit and push to the remote `dev`
+7. **Clone** the repo to your local machine. It's your own repo so **Do not fork.** `cd` into the `git-group-practice` directory.
  
-```
-➜  git-group-practice git:(dev) git add .
-➜  git-group-practice git:(dev) ✗ git commit -m "dev"
-[dev d72b270] dev
- 1 file changed, 3 insertions(+), 1 deletion(-)
-➜  git-group-practice git:(dev) git push origin dev 
-Enumerating objects: 5, done.
-Counting objects: 100% (5/5), done.
-Writing objects: 100% (3/3), 271 bytes | 135.00 KiB/s, done.
-Total 3 (delta 0), reused 0 (delta 0)
-remote: 
-remote: Create a pull request for 'dev' on GitHub by visiting
-remote:      https://github.com/svetlasyrimis/testing/pull/new/dev
-remote: 
-To https://github.com/svetlasyrimis/testing.git
- * [new branch]      dev -> dev
-➜  testing git:(dev)
-```
-If you go to Github, you should see the following: 
+ 
 
-![](screenshot-dev.png)
+<!-- ![](screenshot-dev.png) -->
 
 
-Now that you have a remote `dev` branch let's go ahead and set it as the **default** branch of our repository.
 
-
-**The default branch is considered the base branch in your repository, against which all pull requests and code commits are automatically made, unless you specify a different branch.**
-
-[Setting the default branch](https://help.github.com/en/github/administering-a-repository/setting-the-default-branch)
-
-Your default branch is named `master`. However, we suggest using a `dev` branch instead of `master`. If you have admin rights over a repository on GitHub, you can change the default branch on the repository.
-
-
-6. In Settings, in the left menu, click Branches.
-
-Update the `dev` to be the default branch.
-
-![](dev-default.png)
 
 
 ### The rest of the members:
@@ -78,8 +59,10 @@ Update the `dev` to be the default branch.
   master
 ```
 
-1. Create a branch as yourname-dev `git checkout -b yourname-dev`. 
-    > (i.e., git checkout -b svetla-dev)
+3. Create a branch as yourname-dev 
+```bash 
+git checkout -b <your name here-dev>
+``` 
 
 1. Open the `README` in the text editor.
 
@@ -108,8 +91,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
   `git push origin svetla-dev`
 
-### All members do:
-- On Github, under the Your Branches section, make a pull request using the new pull request button, base should be set to head and compare will be the yourname -dev. 
+9. On Github, under the Your Branches section, make a pull request using the new pull request button, base should be set to head and compare will be the yourname -dev. 
 
 *OR*
 
@@ -119,7 +101,15 @@ no changes added to commit (use "git add" and/or "git commit -a")
 ### Git Czar does:
 1. On Github, click on the Pull Requests tab. You should see pull requests from all team members.
 
-2. Choose one, got to Files Changed, review the changes, then go to Conversation  and merge it in.
+2. Review pull request
+3. As Git Master you will see the following (pic below)
+- (If you set things up correctly only the git master will be able to see the add your review option)
+
+# ![](review_merge1.png)
+4. Click on add your review
+5. Once reviewed you will be able to merge the pull request
+
+6. Merge it 
 
 3. Select the next pull request and notice there is most likely a merge conflict. 
 
@@ -208,4 +198,30 @@ To https://github.com/svetlasyrimis/test-group-git.git
 
 
 `git log --oneline --decorate --graph --all` to see the history of what we just did. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+You can read more at Github Help - [Administering a Repository](https://help.github.com/en/github/administering-a-repository)
+
+
+ 
 
