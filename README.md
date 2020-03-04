@@ -13,7 +13,7 @@ Once settled in your groups decide who will be the Git Czar
 1. On GitHub(personal GitHub **NOT** Enterprise) make a project repo called `git-group-practice`. Make it public and initialize a README).
      
 2. Add a develop branch on your remote repository 
-# ![](add_branch.png)
+# ![](assets/add_branch.png)
 
 3. Now that you have a remote `dev` branch let's go ahead and set it as the **default** branch of our repository. 
 
@@ -21,7 +21,7 @@ Once settled in your groups decide who will be the Git Czar
 
 5. In Settings, in the left menu, click Branches.
 
-Update the `dev` to be the default branch.![](dev-default.png)
+Update the `dev` to be the default branch.![](assets/dev-default.png)
 
 4. Create branch protection rules  
 - Click on settings and then branches
@@ -30,13 +30,13 @@ Update the `dev` to be the default branch.![](dev-default.png)
 - Check Require view from Code Owners   
 - Save Changes   
 
-# ![](add_rules.png)
+# ![](assets/add_rules.png)
 
 5. Share the git repo link with your team in slack.
 
 6. In Settings, under Manage Access, add your team members.
 
- # ![](add_collaborator1.png)
+ # ![](assets/add_collaborator1.png)
 
 7. Your team members should have received an invitation to collaborate via email.
 
@@ -103,7 +103,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 3. As Git Master you will see the following (pic below)
 - (If you set things up correctly only the git master will be able to see the add your review option)
 
-# ![](review_merge3.png)
+# ![](assets/review_merge3.png)
 4. Click on add your review
 5. Once reviewed you will be able to merge the pull request
 
@@ -137,14 +137,14 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 5. The text editor may have the following options as well:
 
-![](vs-code.png)
+![](assets/vs-code.png)
    You may choose to `Accept Both Changes`.
 
 6. Add, commit and push your changes. 
 
 7. Go back to GitHub, on Pull Request tab, select your Pull Request again and this time you should see: 
 
-![](success.png)
+![](assets/success.png)
 
 8. Inform the Git Tzar that your code is ready to be merged.
 

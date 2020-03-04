@@ -15,7 +15,7 @@ Once settled in your groups decide who will be the Git Czar
 1. On GitHub(personal GitHub **NOT** Enterprise) make a project repo called `git-group-practice`. Make it public and initialize a README).
   
 2. Add a develop branch on your remote repository 
-#  ![](add_branch.png )
+#  ![](assets/add_branch.png )
   
   
 3. Now that you have a remote `dev` branch let's go ahead and set it as the **default** branch of our repository.
