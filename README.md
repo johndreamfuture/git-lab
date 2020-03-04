@@ -34,8 +34,10 @@ Update the `dev` to be the default branch.![](dev-default.png)
 
 5. Share the git repo link with your team in slack.
 
-6. In Settings, under Collaborators, add your team members.
- 
+6. In Settings, under Manage Access, add your team members.
+
+ # ![](add_collaborator1.png)
+
 7. Your team members should have received an invitation to collaborate via email.
 
 7. **Clone** the repo to your local machine. It's your own repo so **Do not fork.** `cd` into the `git-group-practice` directory.
@@ -101,17 +103,16 @@ no changes added to commit (use "git add" and/or "git commit -a")
 3. As Git Master you will see the following (pic below)
 - (If you set things up correctly only the git master will be able to see the add your review option)
 
-# ![](review_merge1.png)
+# ![](review_merge3.png)
 4. Click on add your review
 5. Once reviewed you will be able to merge the pull request
 
 6. Merge it 
 
-3. Select the next pull request and notice there is most likely a merge conflict. 
+7. Select the next pull request and notice there is most likely a merge conflict. 
 
-4. Request the team member to resolve the merge conflict.
+8. Request the team member to resolve the merge conflict.
 
-5. Once the merge conflict is resolved, merge it in.
 
 ### Team member with a merge conflict
 
@@ -148,6 +149,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 8. Inform the Git Tzar that your code is ready to be merged.
 
 
+9. Once the merge conflict is resolved, the git tzar can merge it in.
 
 
 ### Git Tzar(wait for assistance)
