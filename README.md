@@ -98,6 +98,8 @@ no changes added to commit (use "git add" and/or "git commit -a")
 - In the pull request tab, select New Pull Request, and then select base to be dev and compare will be the yourname-dev branch. Once confirmed click on Create Pull Request.
 
 
+<br><hr>
+
 ### Team Leader Does:
 1. On Github, click on the Pull Requests tab. You should see pull requests from all team members.
 
