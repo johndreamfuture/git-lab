@@ -171,7 +171,8 @@ After you have the changes from all members in the `dev` branch it is time we me
 3. `git merge dev`
 <!-- The --no-ff flag causes the merge to always create a new commit object, even if the merge could be performed with a fast-forward. This avoids losing information about the historical existence of a feature branch and groups together all commits that together added the feature. -->
 4. `git push origin master`
-[e.g.](https://nvie.com/posts/a-successful-git-branching-model/)
+
+
 
 
 ```
@@ -189,7 +190,7 @@ To https://github.com/svetlasyrimis/test-group-git.git
    085148e..804ab70  master -> master
 ```
 
-
+[e.g. A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/)
 ### Important commands:
  `git checkout dev` — switch to the dev branch
 
