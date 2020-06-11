@@ -6,7 +6,7 @@
 
 ## [Git Docs](https://www.git-scm.com/docs)
 
-Once settled in your groups decide who will be the Git Czar
+Once settled in your groups decide who will be the Team Leader
 *********
 ### Team Leader does:
 
