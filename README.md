@@ -8,7 +8,7 @@
 
 Once settled in your groups decide who will be the Git Czar
 *********
-### Git Czar does:
+### Team Leader does:
 
 1. On GitHub(personal GitHub **NOT** Enterprise) make a project repo called `git-group-practice`. Make it public and initialize a README).
      
@@ -23,7 +23,7 @@ Once settled in your groups decide who will be the Git Czar
 
 Update the `dev` to be the default branch.![](assets/dev-default.png)
 
-4. Create branch protection rules  
+6. Create branch protection rules  
 - Click on settings and then branches
 - Add rule to dev branch    
 - Check Require pull request reviews before merging
@@ -32,19 +32,21 @@ Update the `dev` to be the default branch.![](assets/dev-default.png)
 
 # ![](assets/add_rules.png)
 
-5. Share the git repo link with your team in slack.
+7. Share the git repo link with your team in slack.
 
-6. In Settings, under Manage Access, add your team members.
+8. In Settings, under Manage Access, add your team members.
 
  # ![](assets/add_collaborator1.png)
 
-7. Your team members should have received an invitation to collaborate via email.
+9. Your team members should have received an invitation to collaborate via email.
 
-7. **Clone** the repo to your local machine. It's your own repo so **Do not fork.** `cd` into the `git-group-practice` directory.
+10. **Clone** the repo to your local machine. It's your own repo so **Do not fork.** `cd` into the `git-group-practice` directory.
  
  
 
 <!-- ![](screenshot-dev.png) -->
+
+<br>
 
 ### The rest of the members:
 
@@ -59,12 +61,12 @@ Update the `dev` to be the default branch.![](assets/dev-default.png)
 
 3. Create a branch as yourname-dev 
 ```bash 
-git checkout -b <your name here-dev>
+git checkout -b your-name-here-dev
 ``` 
 
 4. Open the `README` in the text editor.
 
-5. Navigate to [Facts Site](https://www.thefactsite.com/) and select a fun and interesting fact of your choice. Copy and paste the text into the `README` file. You can do this task at the same time.
+5. Make some changes in the `README`
 
 
 6. Check to see which changes were made using `git status`. 
@@ -87,7 +89,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 8. All members should push their changes.
 
-  `git push origin svetla-dev`
+  `git push your-name-here-dev`
 
 9. On Github, under the Your Branches section, make a pull request using the new pull request button, base should be set to head and compare will be the yourname -dev. 
 
@@ -96,33 +98,33 @@ no changes added to commit (use "git add" and/or "git commit -a")
 - In the pull request tab, select New Pull Request, and then select base to be dev and compare will be the yourname-dev branch. Once confirmed click on Create Pull Request.
 
 
-### Git Czar does:
+### Team Leader Does:
 1. On Github, click on the Pull Requests tab. You should see pull requests from all team members.
 
-2. Review pull request
-3. As Git Master you will see the following (pic below)
+1. Review pull request
+1. As Git Master you will see the following (pic below)
 - (If you set things up correctly only the git master will be able to see the add your review option)
 
 # ![](assets/review_merge3.png)
-4. Click on add your review
-5. Once reviewed you will be able to merge the pull request
+1. Click on add your review
+1. Once reviewed you will be able to merge the pull request
 
-6. Merge it 
+1. Merge it 
 
-7. Select the next pull request and notice there is most likely a merge conflict. 
+1. Select the next pull request and notice there is most likely a merge conflict. 
 
-8. Request the team member to resolve the merge conflict.
+1. Request the team member to resolve the merge conflict.
 
 
 ### Team member with a merge conflict
 
 1. Make sure you are on yourname-dev
 
-`git checkout yourname-dev`
+`git checkout your-name-here-dev`
 
-2. Get the **latest changes** from `dev` by running `git pull origin dev` (very important step).
+1. Get the **latest changes** from `dev` by running `git pull origin dev` (very important step).
 
-3. The text editor will highlight the merge conflict like so:
+1. The text editor will highlight the merge conflict like so:
 
 ```
 # git-group-practice
@@ -133,26 +135,26 @@ no changes added to commit (use "git add" and/or "git commit -a")
 >>>>>>> commit hash
 ```
 
-4. The objective is to have both your changes, so in this situation simply remove `<<<<<<< HEAD`, `=======` and `>>>>>>> commit hash`
+1. The objective is to have both your changes, so in this situation simply remove `<<<<<<< HEAD`, `=======` and `>>>>>>> commit hash`
 
-5. The text editor may have the following options as well:
+1. The text editor may have the following options as well:
 
 ![](assets/vs-code.png)
    You may choose to `Accept Both Changes`.
 
-6. Add, commit and push your changes. 
+1. Add, commit and push your changes. 
 
-7. Go back to GitHub, on Pull Request tab, select your Pull Request again and this time you should see: 
+1. Go back to GitHub, on Pull Request tab, select your Pull Request again and this time you should see: 
 
 ![](assets/success.png)
 
-8. Inform the Git Tzar that your code is ready to be merged.
+1. Inform the Git Tzar that your code is ready to be merged.
 
 
-9. Once the merge conflict is resolved, the git tzar can merge it in.
+1. Once the merge conflict is resolved, the git tzar can merge it in.
 
 
-### Git Tzar(wait for assistance)
+### Team Leader(wait for assistance)
 
 After you have the changes from all members in the `dev` branch it is time we merge `dev` into `master`. 
 
@@ -184,19 +186,19 @@ To https://github.com/svetlasyrimis/test-group-git.git
 
 
 ### Important commands:
- `git checkout dev` —— switch to the dev branch
- `git pull origin dev` ——— get the changes from the `dev` 
- `git checkout yourname-dev` ———— to switch your branch
- `git merge dev` ———- to merge dev changes into your branch 
+ `git checkout dev` — switch to the dev branch
 
+ `git pull origin dev` — get the changes from the `dev` 
 
+ `git checkout yourname-dev` — to switch your branch
 
- Delete your remaining local branches `git branch -d yourname-branch` [-d or -D ?](https://koukia.ca/delete-a-local-and-a-remote-git-branch-61df0b10d323)
- Delete the remote branches `git push origin --delete remote-branch`
+ `git merge dev` — to merge dev changes into your branch 
 
+ `git branch -d yourname-branch` [-d or -D ?](https://koukia.ca/delete-a-local-and-a-remote-git-branch-61df0b10d323) — Delete your remaining local branches
+ 
+ `git push origin --delete remote-branch` — Delete the remote branches
 
-`git log --oneline --decorate --graph --all` to see the history of what we just did. 
-
+ `git log --oneline --decorate --graph --all` to see the history of what we just did. 
 
 
 You can read more at Github Help - [Administering a Repository](https://help.github.com/en/github/administering-a-repository)
