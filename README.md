@@ -89,7 +89,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 8. All members should push their changes.
 
-  `git push your-name-here-dev`
+  `git push origin your-name-here-dev`
 
 9. On Github, under the Your Branches section, make a pull request using the new pull request button, base should be set to head and compare will be the yourname -dev. 
 
