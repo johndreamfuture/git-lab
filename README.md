@@ -158,7 +158,8 @@ no changes added to commit (use "git add" and/or "git commit -a")
 9. Once the merge conflict is resolved, the Team Leader can merge it in.
 
 
-### Team Leader(wait for assistance)
+<br><hr>
+### Team Leader
 
 After you have the changes from all members in the `dev` branch it is time we merge `dev` into `master`. 
 
@@ -166,12 +167,10 @@ After you have the changes from all members in the `dev` branch it is time we me
 1. `git checkout master`
 2. `git pull origin dev`
 3. `git merge dev`
-
-The --no-ff flag causes the merge to always create a new commit object, even if the merge could be performed with a fast-forward. This avoids losing information about the historical existence of a feature branch and groups together all commits that together added the feature.
-
-[](https://nvie.com/posts/a-successful-git-branching-model/)
-
+<!-- The --no-ff flag causes the merge to always create a new commit object, even if the merge could be performed with a fast-forward. This avoids losing information about the historical existence of a feature branch and groups together all commits that together added the feature. -->
 4. `git push origin master`
+[e.g.](https://nvie.com/posts/a-successful-git-branching-model/)
+
 
 ```
 ➜  test-group-git git:(dev) git checkout master
