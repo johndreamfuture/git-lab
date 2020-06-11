@@ -46,7 +46,7 @@ Update the `dev` to be the default branch.![](assets/dev-default.png)
 
 <!-- ![](screenshot-dev.png) -->
 
-<br>
+<br><hr>
 
 ### The rest of the members:
 
@@ -101,30 +101,34 @@ no changes added to commit (use "git add" and/or "git commit -a")
 ### Team Leader Does:
 1. On Github, click on the Pull Requests tab. You should see pull requests from all team members.
 
-1. Review pull request
-1. As Git Master you will see the following (pic below)
+2. Review pull request
+3. As Git Master you will see the following (pic below)
 - (If you set things up correctly only the git master will be able to see the add your review option)
 
 # ![](assets/review_merge3.png)
-1. Click on add your review
-1. Once reviewed you will be able to merge the pull request
+4. Click on add your review
+5. Once reviewed you will be able to merge the pull request
 
-1. Merge it 
+6. Merge it 
 
-1. Select the next pull request and notice there is most likely a merge conflict. 
+7. Select the next pull request and notice there is most likely a merge conflict. 
 
-1. Request the team member to resolve the merge conflict.
+8. Request the team member to resolve the merge conflict.
 
 
+
+
+
+<br><hr>
 ### Team member with a merge conflict
 
 1. Make sure you are on yourname-dev
 
 `git checkout your-name-here-dev`
 
-1. Get the **latest changes** from `dev` by running `git pull origin dev` (very important step).
+2. Get the **latest changes** from `dev` by running `git pull origin dev` (very important step).
 
-1. The text editor will highlight the merge conflict like so:
+3. The text editor will highlight the merge conflict like so:
 
 ```
 # git-group-practice
@@ -135,23 +139,23 @@ no changes added to commit (use "git add" and/or "git commit -a")
 >>>>>>> commit hash
 ```
 
-1. The objective is to have both your changes, so in this situation simply remove `<<<<<<< HEAD`, `=======` and `>>>>>>> commit hash`
+4. The objective is to have both your changes, so in this situation simply remove `<<<<<<< HEAD`, `=======` and `>>>>>>> commit hash`
 
-1. The text editor may have the following options as well:
+5. The text editor may have the following options as well:
 
 ![](assets/vs-code.png)
    You may choose to `Accept Both Changes`.
 
-1. Add, commit and push your changes. 
+6. Add, commit and push your changes. 
 
-1. Go back to GitHub, on Pull Request tab, select your Pull Request again and this time you should see: 
+7. Go back to GitHub, on Pull Request tab, select your Pull Request again and this time you should see: 
 
 ![](assets/success.png)
 
-1. Inform the Git Tzar that your code is ready to be merged.
+8. Inform the Team Leader that your code is ready to be merged.
 
 
-1. Once the merge conflict is resolved, the git tzar can merge it in.
+9. Once the merge conflict is resolved, the Team Leader can merge it in.
 
 
 ### Team Leader(wait for assistance)
