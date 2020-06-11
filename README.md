@@ -34,7 +34,7 @@ Update the `dev` to be the default branch.![](assets/dev-default.png)
 
 7. Share the git repo link with your team in slack.
 
-8. In Settings, under Manage Access, add your team members.
+8. In Settings, under Collaborators, add your team members.
 
  # ![](assets/add_collaborator1.png)
 
