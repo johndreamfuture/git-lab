@@ -95,7 +95,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 *OR*
 
-- In the pull request tab, select New Pull Request, and then select base to be dev and compare will be the yourname-dev branch. Once confirmed click on Create Pull Request.
+- In the pull request tab, select New Pull Request, and then select base to be development and compare will be the yourname-dev branch. Once confirmed click on Create Pull Request.
 
 
 <br><hr>
@@ -128,7 +128,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 `git checkout your-name-here-dev`
 
-2. Get the **latest changes** from `dev` by running `git pull origin development` (very important step).
+2. Get the **latest changes** from `development` by running `git pull origin development` (very important step).
 
 3. The text editor will highlight the merge conflict like so:
 
@@ -137,7 +137,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 <<<<<<< HEAD
 *YOUR VERSION*
 =======
-*What's currently on dev branch*
+*What's currently on development branch*
 >>>>>>> commit hash
 ```
 
@@ -170,7 +170,7 @@ After you have the changes from all members in the merged into the `development`
 2. `git pull origin development`
 3. `git merge development`
 <!-- The --no-ff flag causes the merge to always create a new commit object, even if the merge could be performed with a fast-forward. This avoids losing information about the historical existence of a feature branch and groups together all commits that together added the feature. -->
-4. `git push origin master`
+4. `git push origin main`
 
 
 
