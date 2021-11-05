@@ -12,20 +12,20 @@ Once settled in your groups decide who will be the Team Leader
 
 1. On GitHub(personal GitHub **NOT** Enterprise) make a project repo called `git-group-practice`. Make it public and initialize a README).
      
-2. Add a develop branch on your remote repository 
+2. Add a development branch on your remote repository 
 # ![](assets/add_branch.png)
 
-3. Now that you have a remote `dev` branch let's go ahead and set it as the **default** branch of our repository. 
+3. Now that you have a remote `development` branch let's go ahead and set it as the **default** branch of our repository. 
 
-4. Your default branch is named `master`. If you have admin rights over a repository on GitHub, you can change the default branch on the repository. [Setting the default branch](https://help.github.com/en/github/administering-a-repository/setting-the-default-branch)
+4. Your default branch is named `main`. If you have admin rights over a repository on GitHub, you can change the default branch on the repository. [Setting the default branch](https://help.github.com/en/github/administering-a-repository/setting-the-default-branch)
 
 5. In Settings, in the left menu, click Branches.
 
-Update the `dev` to be the default branch.![](assets/dev-default.png)
+Update the `development` to be the default branch.![](assets/dev-default.png)
 
 6. Create branch protection rules  
 - Click on settings and then branches
-- Add rule to dev branch    
+- Add rule to development branch    
 - Check Require pull request reviews before merging
 - Check Require view from Code Owners   
 - Save Changes   
@@ -55,8 +55,8 @@ Update the `dev` to be the default branch.![](assets/dev-default.png)
 2. Type `git branch -a` to see which branch you are on, as well as, your remotes. The branch you are on is supposed to have a `*` in front.
 
 ```
-* dev
-  master
+* development
+  main
 ```
 
 3. Create a branch as yourname-dev 
@@ -104,8 +104,8 @@ no changes added to commit (use "git add" and/or "git commit -a")
 1. On Github, click on the Pull Requests tab. You should see pull requests from all team members.
 
 2. Review pull request
-3. As Git Master you will see the following (pic below)
-- (If you set things up correctly only the git master will be able to see the add your review option)
+3. As Git Leader you will see the following (pic below)
+- (If you set things up correctly only the git leader will be able to see the add your review option)
 
 # ![](assets/review_merge3.png)
 4. Click on add your review
@@ -128,7 +128,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 `git checkout your-name-here-dev`
 
-2. Get the **latest changes** from `dev` by running `git pull origin dev` (very important step).
+2. Get the **latest changes** from `dev` by running `git pull origin development` (very important step).
 
 3. The text editor will highlight the merge conflict like so:
 
@@ -154,21 +154,21 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 ![](assets/success.png)
 
-8. Inform the Team Leader that your code is ready to be merged.
+8. Inform the Github Leader that your code is ready to be merged.
 
 
 9. Once the merge conflict is resolved, the Team Leader can merge it in.
 
 
 <br><hr>
-### Team Leader
+### Github Leader
 
-After you have the changes from all members in the `dev` branch it is time we merge `dev` into `master`. 
+After you have the changes from all members in the merged into the `development` branch, it is time we merge `development` into `main`. 
 
 
-1. `git checkout master`
-2. `git pull origin dev`
-3. `git merge dev`
+1. `git checkout main`
+2. `git pull origin development`
+3. `git merge development`
 <!-- The --no-ff flag causes the merge to always create a new commit object, even if the merge could be performed with a fast-forward. This avoids losing information about the historical existence of a feature branch and groups together all commits that together added the feature. -->
 4. `git push origin master`
 
@@ -176,29 +176,29 @@ After you have the changes from all members in the `dev` branch it is time we me
 
 
 ```
-➜  test-group-git git:(dev) git checkout master
-Switched to branch 'master'
-Your branch is up to date with 'origin/master'.
-➜  test-group-git git:(master) git merge dev
+➜  test-group-git git:(development) git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+➜  test-group-git git:(main) git merge development
 Updating 29fb49d..804ab70
 Fast-forward
  README.md | 5 +----
  1 file changed, 1 insertion(+), 4 deletions(-)
-➜  test-group-git git:(master) git push origin master
+➜  test-group-git git:(main) git push origin main
 Total 0 (delta 0), reused 0 (delta 0)
 To https://github.com/svetlasyrimis/test-group-git.git
-   085148e..804ab70  master -> master
+   085148e..804ab70  main -> main
 ```
 
 [e.g. A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/)
 ### Important commands:
- `git checkout dev` — switch to the dev branch
+ `git checkout development` — switch to the development branch
 
- `git pull origin dev` — get the changes from the `dev` 
+ `git pull origin development` — get the changes from the `development` 
 
  `git checkout yourname-dev` — to switch your branch
 
- `git merge dev` — to merge dev changes into your branch 
+ `git merge development` — to merge development changes into your branch 
 
  `git branch -d yourname-branch` [-d or -D ?](https://koukia.ca/delete-a-local-and-a-remote-git-branch-61df0b10d323) — Delete your remaining local branches
  
